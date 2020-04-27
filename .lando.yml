@@ -1,0 +1,8 @@
+name: go-wordpress
+recipe: wordpress
+config:
+  php: 7.2
+  via: nginx
+  webroot: app/web
+  database: mariadb
+  xdebug: true
