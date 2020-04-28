@@ -1,5 +1,5 @@
 # go-wordpress
-A starting point and local deveopment environment for Wordpress projects powered by [Lando](https://lando.dev/). 
+A starting point and local deveopment environment for Wordpress projects powered by [Lando](https://lando.dev/) and using the [Bedrock Wordpress boilerplate](https://roots.io/bedrock/).
 
 Lando is 'a free, open source, cross-platform, local development environment and DevOps tool built on Docker container technology' that simplifies using Docker containers for local development.
 
