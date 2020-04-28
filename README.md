@@ -12,6 +12,10 @@ Lando is 'a free, open source, cross-platform, local development environment and
 2. Run `lando start` - lando will download the requirments of the development environment based on the configuration in `.lando.yml`.
 3. You can browse to your site [here](https://go-wordpress.lndo.site).
 
+Optionally you can set you machine to trust the SSL certificate the development environment uses by following the [appropriate instructions](https://docs.lando.dev/config/security.html#certificates) for your operating system. 
+
+**Firefox users!** Be aware that if you use Firefox as your development browser there is an important caveat to the instructions above, so make sure you read to the end!
+
 ## Commands
 Some basic commands for working with Lando.
 
