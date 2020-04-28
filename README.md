@@ -37,7 +37,7 @@ lando db-import <file>  Imports a dump file into database service
 lando wp                Runs wordpress commands
 lando mysql             Drops into a MySQL shell on a database service
 lando php               Runs php commands
-lando ssh				   Drops into a shell on a service
+lando ssh               Drops into a shell on a service
 ```
 
 Usage examples:
