@@ -1,10 +1,10 @@
 # go-wordpress
-A starting point and local deveopment environment for Wordpress projects powered by Lando. 
+A starting point and local deveopment environment for Wordpress projects powered by [Lando](https://lando.dev/). 
 
 Lando is 'a free, open source, cross-platform, local development environment and DevOps tool built on Docker container technology' that simplifies using Docker containers for local development.
 
 ## Requirements
-1. The [latest stable release](https://github.com/lando/lando/releases/latest) of [Lando](https://lando.dev/). It’s advisable to at least read [the basics](https://docs.lando.dev/basics/) about Lando, and worth running through the documentation as time allows.
+1. The [latest stable release](https://github.com/lando/lando/releases/latest) of Lando. It’s advisable to at least read [the basics](https://docs.lando.dev/basics/) to familiarise yourself with whats going on under the hood.
 
 ## Installation
 
