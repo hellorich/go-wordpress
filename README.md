@@ -4,6 +4,12 @@ A starting point for Wordpress projects.
 ## Requirements
 1. The [latest stable release](https://github.com/lando/lando/releases/latest) of [Lando](https://lando.dev/). It’s advisable to at least read [the basics](https://docs.lando.dev/basics/#what-is-it-good-for) about Lando, and worth running through the documentation as time allows.
 
+## Installation
+
+1. Download the repository and `cd` into the root.
+2. Run `lando start` - lando will download the requirments of the development environment based on the configuration in `.lando.yml`.
+3. You can browse to your site [here](https://go-wordpress.lndo.site).
+
 ## Commands
 Some basic commands for working with Lando.
 
