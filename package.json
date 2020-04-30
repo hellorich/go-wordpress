@@ -1,0 +1,27 @@
+{
+  "name": "go-wordpress",
+  "version": "1.0.0",
+  "description": "A starting point and local deveopment environment for Wordpress projects powered by [Lando](https://lando.dev/) and using the [Bedrock Wordpress boilerplate](https://roots.io/bedrock/).",
+  "main": "install.js",
+  "dependencies": {
+    "ora": "^4.0.4",
+    "yaml": "^1.9.2"
+  },
+  "devDependencies": {
+    "prompts": "^2.3.2"
+  },
+  "scripts": {
+    "installer": "node install.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/hellorich/go-wordpress.git"
+  },
+  "author": "Rich Cookson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/hellorich/go-wordpress/issues"
+  },
+  "homepage": "https://gitlab.com/hellorich/go-wordpress#readme"
+}
