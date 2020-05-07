@@ -32,10 +32,13 @@ const config = {
 const feedback = {
   'welcome': `\n  🤖\n\n  Your development site will run on:\n\n  ${config.bedrock.WP_HOME}\n`,
   'installing': 'Installing development environment...',
+  'complete': '\n  🤖\n\n  Installation complete! Would you like to start the server now?',
+  'starting': '\n  🤖\n\n  Booting server...',
+  'started': `\n  🤖\n\n  Server started!\n`,
 }
 
 // User interface prompts
-const questions = [
+const installerPrompts = [
   {
     confirm: null,
     initial: false,
@@ -139,7 +142,7 @@ console.log(feedback.welcome);
     }
   };
 
-  const answers = await prompts(questions, { onSubmit });
+  await prompts(installerPrompts, { onSubmit });
 
   // Write Lando .yml file
   let yml = yaml.stringify(config.lando);
@@ -166,7 +169,33 @@ console.log(feedback.welcome);
       for (let [key, value] of Object.entries(config.bedrock)) {
         env += (`${key}=${value}\n`);
       }
-      fsp.writeFile(path, env , 'utf-8');
+      fsp.writeFile(path, env , 'utf-8').then(async () => {
+        const lando = await prompts({
+          initial: false,
+          message: feedback.complete,
+          name: 'start',
+          type: 'confirm',
+        });
+
+        if (lando.start === true) {
+          const landoThrobber = ora(feedback.starting).start();
+
+          const landoStart = spawn('lando', ['start']);
+
+          // landoStart.stdout.on('data', (data) => {
+          //   console.log(`stdout: ${data}`);
+          // });
+          
+          // landoStart.stderr.on('data', (data) => {
+          //   console.error(`stderr: ${data}`);
+          // });
+          
+          landoStart.on('close', () => {
+            landoThrobber.stop();
+            console.log(feedback.started);
+          });
+        }
+      });
     });
   });
 })();
