@@ -1,8 +1,8 @@
-name: frobitz
+name: hellorich
 recipe: wordpress
 config:
   php: 7.4
   via: nginx
   webroot: app/web
-  database: mariadb
-  xdebug: true
+  database: mysql
+  xdebug: false
