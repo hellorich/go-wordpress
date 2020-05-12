@@ -8,7 +8,8 @@ Lando is 'a free, open source, cross-platform, local development environment and
 
 ## Installation
 1. Download the repository and `cd` into the root.
-2. Run `npm run installer` and follow the onscreen prompts to set your Lando dev environment.
+2. Install the node dependencies using `npm install`.
+3. Run `npm run installer` and follow the onscreen prompts to set your Lando dev environment.
 
 ## SSL Certificates 
 Optionally you can set you machine to trust the SSL certificate the development environment uses by following the [appropriate instructions](https://docs.lando.dev/config/security.html#certificates) for your operating system. 
