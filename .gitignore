@@ -1,0 +1,4 @@
+# Ignore files we install
+.lando.yml
+app
+node_modules
